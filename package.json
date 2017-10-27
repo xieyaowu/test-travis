@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo 'test ok'",
-    "deploy:BAE": "bash deploy.sh"
+    "build": "mkdir dist && touch dist/a.html",
+    "predeploy": "[ -d dist ] || npm run build",
+    "deploy": "bash deploy.sh"
   },
   "repository": {
     "type": "git",

@@ -6,6 +6,6 @@ jobs:
   include:
     - stage: validator
       script: npm test
-    - stage: build BAE
+    - stage: deploy
       if: tag =~ ^v
-      script: npm run deploy:BAE
+      script: npm run deploy
