@@ -1,0 +1,10 @@
+language: node_js
+node_js:
+  - '4'
+  - 'node'
+
+jobs:
+  include:
+    - stage: build BAE
+      if: tag =~ ^v
+      script: npm run deploy:BAE
