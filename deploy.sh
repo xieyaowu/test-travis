@@ -2,6 +2,8 @@
 
 dir=$(cd "$(dirname ${0})"; pwd)
 
+echo $ACCESS_KEY
+
 if [ ! -n "$TRAVIS_TAG" ]; then 
     echo "CI tag 为空"
     exit 1
